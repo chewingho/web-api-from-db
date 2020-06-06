@@ -37,7 +37,7 @@ for book in books:
     row_dict['update_date'] = book.UPDATE_DATE.strftime("%Y/%m/%d")
     book_list.append(row_dict)
     row_dict = {}
-
+    
 #@app.route('/')
 def home():
     return '/all -> show all item'
@@ -63,9 +63,8 @@ def category():
 
     for elem in book_list:
         if elem['category'] == category:
-            results.append(elem)
+            results.append(elem)   
     return jsonify(results)
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    
+    app.run(debug=True,host='0.0.0.0',port=5000)
