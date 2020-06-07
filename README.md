@@ -15,6 +15,13 @@ from flask_sqlalchemy import SQLAlchemy
 > /all->資料庫所有分類的資料  
 > /categories?category=中文書/簡體書/MOOK，顯示中文書/簡體書/MOOK分類下的資料
 5. 執行python，啟動Web應用程式
+```
+Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```  
+  ![首頁](https://github.com/chewingho/web-api-from-db/blob/master/readme%E5%9C%96%E7%89%87/homepage.PNG)  
+  ![MOOK分類](https://github.com/chewingho/web-api-from-db/blob/master/readme%E5%9C%96%E7%89%87/MOOK%E5%88%86%E9%A1%9E.PNG)
+
+
 
 ----
 ## Review ##  
