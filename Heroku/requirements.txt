@@ -1,0 +1,6 @@
+Flask
+jsonify
+flask_sqlalchemy
+SQLAlchemy
+pymysql
+gunicorn
