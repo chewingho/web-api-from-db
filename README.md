@@ -1,7 +1,7 @@
 # web-api-from-db and dockerize
 ----	
 ## Description	
-> 使用Flask將[將博客來的爬蟲結果](https://github.com/chewingho/web-crawler-hot-item-of-books)  
+> 使用Flask將[博客來的爬蟲結果](https://github.com/chewingho/web-crawler-hot-item-of-books)  
   1.製作成Web API，並製作成Docker映像檔後執行容器  
   2.將Web API佈署到[Heroku](https://kateho-api.herokuapp.com/)  
 
@@ -67,7 +67,6 @@ docker run -p 5000:5000 dockerfile_book
 ![Docker IP](https://github.com/chewingho/web-api-from-db/blob/docker/readme%E5%9C%96%E7%89%87/Docker%20IP.PNG)  
 > 另外，若要重新執行相同的docker run指令，因為Port 5000已經被剛剛啟動的容器使用，必須透過```docker ps```、```docker stop <Container ID>```來停止容器再執行
 ![docker run 失敗](https://github.com/chewingho/web-api-from-db/blob/docker/readme%E5%9C%96%E7%89%87/docker%20run%20%E5%A4%B1%E6%95%97.png)  
->>>>>>> docker
 
 ## Deploy on Heroku  
 1. 申請免費雲端資料庫，並將資料匯入資料庫(當時只匯入單代資料(即某一週的爬蟲結果))  
@@ -82,7 +81,8 @@ web gunicorn book:app
 python-3.7.6
 ```
 3. 透過Heroku Git佈署到Heroku
-4. 成功佈署，https://kateho-api.herokuapp.com/
+![heroku](https://github.com/chewingho/web-api-from-db/blob/master/readme%E5%9C%96%E7%89%87/heroku.PNG)  
+4. 成功佈署，https://kateho-api.herokuapp.com/  
 ----
 ## Review ##  
   Web API只能在本地端顯示，因此學了如何將Web API佈署到Heroku。  
