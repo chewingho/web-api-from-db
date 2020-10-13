@@ -6,10 +6,11 @@
   2.將Web API佈署到[Heroku](https://kateho-api.herokuapp.com/)  
 
 ## Process
-1. import要使用到的module
+1. 安裝所需套件([requirements.txt](https://github.com/chewingho/web-api-from-db/blob/master/requirements.txt))後，import要使用到的module
 ```python	
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 ```
 2. 設定資料庫連線
 3. 透過ORM取得資料庫資料
