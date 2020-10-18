@@ -37,10 +37,7 @@ for book in books:
     book_list.append(row_dict)
     row_dict = {}
 
-#@app.route('/')
-def home():
-    return '/all -> show all item'
-
+# API
 @app.route('/')
 def index():
     pagetitle = "HomePage"
@@ -48,23 +45,18 @@ def index():
                             mytitle=pagetitle,
                             mycontent="Web api demo of Kateho")
     
-@app.route('/all', methods=['GET'])  
-def query_data():
-    return jsonify(book_list)
-
 @app.route('/categories', methods=['GET'])
 def category():
     if 'category' in request.args:
         category = request.args['category']
     else:
-        return "找不到該分類，分類只有中文書、簡體書、MOOK"
+        return jsonify(book_list)
     results = []
 
     for elem in book_list:
         if elem['category'] == category:
-            results.append(elem)
+            results.append(elem)   
     return jsonify(results)
-
 if __name__ == "__main__":
     app.run(debug=True)
     #app.run(host='0.0.0.0',port=5000)
